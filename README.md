@@ -5,8 +5,9 @@ Articles and recipes for network programming with the
 socket classes, protocol classes, worked examples, and multithreading tutorials.
 
 > Community teaching material about Ararat Synapse — **not** official upstream
-> documentation. Ararat Synapse itself is by Lukas Gebauer, now on GitHub at
-> [geby/synapse](https://github.com/geby/synapse).
+> documentation. Ararat Synapse is by **Lukas Gebauer**, now on GitHub at
+> [geby/synapse](https://github.com/geby/synapse). All credit for the library
+> belongs there.
 
 ## What this is
 
@@ -18,14 +19,13 @@ multi-threaded applications.
 
 ## History
 
-Originally a wiki at **`dubaron.com/synapsecookbook`**, authored by R.M. Tegel
-(`artee`) with various contributors, Creative-Commons licensed. The wiki went
-offline after a hosting miscommunication; **version 0.1 — the only release ever
-published — was reconstructed from the Internet Archive** and is preserved here
-verbatim under [`releases/`](releases/). Landing-page snapshots (2006 and 2019)
-are kept alongside.
+Originally a community wiki (version 0.1, Creative-Commons licensed) that went
+offline. **Version 0.1 — the only release ever published — was reconstructed
+from the Internet Archive** and is preserved here verbatim under
+[`releases/`](releases/), with landing-page snapshots (2006 and 2019) alongside.
 
-Migrated to GitHub in **2026**, and the way forward begins (below).
+Moved to GitHub and revived in **2026** as living documentation. This is
+maintained for the community, for the future — no ownership is claimed over it.
 
 ## The way forward
 
@@ -53,10 +53,11 @@ book/
 
 ## Related
 
-- [Ararat Synapse](https://synapse.ararat.cz/) · [geby/synapse](https://github.com/geby/synapse) — the library this teaches
-- [Visual Synapse](https://github.com/yoctobyte/visualsynapse) — component/server superset (has its own cookbook section here)
+- [Ararat Synapse](https://synapse.ararat.cz/) · [geby/synapse](https://github.com/geby/synapse) — the library this teaches (© Lukas Gebauer)
+- [Visual Synapse](https://github.com/yoctobyte/visualsynapse) — component/server superset built on Synapse
 
 ## License
 
-Creative Commons (as released with 0.1). Attribution: **R.M. Tegel and various
-authors**. See [`LICENSE`](LICENSE).
+Released to the public domain under **[CC0 1.0](LICENSE)** — no rights reserved,
+use it for anything. Credit for **Ararat Synapse itself belongs to Lukas
+Gebauer**; this cookbook only teaches its use.

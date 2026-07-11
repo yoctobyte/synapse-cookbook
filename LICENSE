@@ -1,15 +1,22 @@
-The Synapse Cookbook
-Copyright (c) 2006 R.M. Tegel and various authors
+CC0 1.0 Universal — Public Domain Dedication
 
-This work is licensed under a Creative Commons Attribution 4.0 International
-License (CC BY 4.0), continuing the Creative Commons licensing under which
-version 0.1 was originally released.
+The revived Markdown edition of The Synapse Cookbook is dedicated to the public
+domain. To the extent possible under law, the maintainers have waived all
+copyright and related or neighboring rights to this work. You may copy, modify,
+distribute, and use it, even for commercial purposes, all without asking
+permission.
 
-You are free to share and adapt the material for any purpose, provided you give
-appropriate credit to R.M. Tegel and the original contributors.
+Full text: https://creativecommons.org/publicdomain/zero/1.0/
 
-Full license text: https://creativecommons.org/licenses/by/4.0/
+---
 
-Note: code examples herein target the Ararat Synapse library (by Lukas Gebauer,
-https://synapse.ararat.cz/), which carries its own (BSD-style) license. This
-cookbook is community teaching material, not official Ararat Synapse documentation.
+Provenance and credit
+
+- The library this cookbook teaches — **Ararat Synapse** — is the work of
+  **Lukas Gebauer** (https://synapse.ararat.cz/, https://github.com/geby/synapse)
+  and carries its own (BSD-style) license. All credit for the library belongs
+  there. This cookbook is community teaching material, not official documentation.
+
+- The recovered historical artifact under `releases/` (version 0.1) was
+  originally released by community authors under a Creative Commons license; it
+  is preserved verbatim as a historical record.
