@@ -20,7 +20,7 @@ fi
 echo "assembling ${#files[@]} files -> $out"
 pandoc "${files[@]}" \
   --metadata title="The Synapse Cookbook" \
-  --metadata author="R.M. Tegel and various authors" \
+  --metadata author="Community (CC0). Ararat Synapse by Lukas Gebauer." \
   --toc --toc-depth=3 \
   -V documentclass=report \
   -o "$out"
