@@ -1,6 +1,6 @@
 # The Synapse Cookbook
 
-📖 Read the cookbook as a [PDF](synapsecookbook.pdf) (~135 pp) — or browse the [contents](SUMMARY.md).
+📖 Read online at **[yoctobyte.github.io/synapse-cookbook](https://yoctobyte.github.io/synapse-cookbook/)** · download the [PDF](synapsecookbook.pdf) (~144 pp) · or browse the [contents](SUMMARY.md).
 
 Articles and recipes for network programming with the
 [Ararat Synapse](https://synapse.ararat.cz/) TCP/IP library for Object Pascal —

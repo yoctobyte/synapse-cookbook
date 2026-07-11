@@ -1,0 +1,53 @@
+name: Publish to GitHub Pages
+
+# Builds the HTML edition (pandoc only — fast, no LaTeX) and publishes it to
+# GitHub Pages, alongside the committed downloadable PDF. The PDF itself is built
+# locally (see BUILDING.md) and committed; CI only assembles the online HTML.
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'book/**'
+      - 'tools/pages-*.html'
+      - 'tools/build-pdf.sh'
+      - 'synapsecookbook.pdf'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+      - name: Build HTML edition
+        run: |
+          bash tools/build-pdf.sh   # produces build/synapsecookbook.html (PDF steps skip in CI)
+          mkdir -p _site
+          cp build/synapsecookbook.html _site/index.html
+          # ship the premium PDF next to the site so the Download button resolves
+          [ -f synapsecookbook.pdf ] && cp synapsecookbook.pdf _site/synapsecookbook.pdf || true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

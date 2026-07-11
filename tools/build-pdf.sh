@@ -35,8 +35,12 @@ echo "wrote $combined ($(wc -l < "$combined") lines)"
 
 # 2. If pandoc is available, build HTML (self-contained, no LaTeX required).
 if command -v pandoc >/dev/null 2>&1; then
+  incs=()
+  [ -f tools/pages-style.html ]  && incs+=(-H tools/pages-style.html)
+  [ -f tools/pages-banner.html ] && incs+=(-B tools/pages-banner.html)
   pandoc "$combined" --standalone --toc --toc-depth=3 \
-    --metadata title="The Synapse Cookbook" \
+    --metadata title="The Synapse Cookbook" --metadata pagetitle="The Synapse Cookbook" \
+    "${incs[@]}" \
     -o build/synapsecookbook.html
   echo "wrote build/synapsecookbook.html"
 
