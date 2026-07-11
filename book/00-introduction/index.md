@@ -9,7 +9,9 @@ example-first companion to the library — not a formal reference.
 
 Beginners may want to start at the **Appendix — Tutorials**: *"Synapse in two
 hours"* shows elementary code and gives a kickstart in writing multi-threaded
-applications.
+applications. Readers who want to understand *why* the library is shaped the way
+it is should read **[The Architecture of Synapse](../01-architecture/00-index.md)**
+first — it is the heart of this cookbook, and the reason the recipes are so short.
 
 > **Status (2026 revival):** this Markdown edition is being migrated,
 > section-by-section, from the recovered 0.1 text

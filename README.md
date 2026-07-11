@@ -39,11 +39,19 @@ source to migrate section-by-section into clean Markdown.
 ```
 book/
   00-introduction/
-  01-socket-classes/      TBlockSocket, TTCPBlockSocket, TUDPBlockSocket, TSocksBlockSocket
-  02-protocol-classes/    TPOP3Send, LDAP, …
-  03-visual-synapse/
+  01-architecture/        ★ the heart — why Synapse is shaped as it is
+     blocking model & threads · synsock OS seam · SSL plugin · own crypto
+  02-socket-classes/      TBlockSocket, TTCPBlockSocket, TUDPBlockSocket, TSocksBlockSocket
+  03-protocol-classes/    TPOP3Send, LDAP, …
+  04-visual-synapse/
   99-appendix-tutorials/  "Synapse in two hours", multithreading
 ```
+
+**Synapse itself is the primary subject.** The architecture section leads,
+celebrating the design — one blocking socket for every transport (incl. serial),
+the `synsock` cross-platform seam, the link-time TLS plugin (SSL bolted on
+mid-stream), and the hand-rolled crypto/encoding with zero external
+dependencies.
 
 ### Roadmap
 - [ ] Migrate each 0.1 section from the recovered text into structured Markdown
