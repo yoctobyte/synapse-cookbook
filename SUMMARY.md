@@ -4,7 +4,7 @@ Navigate the book. Reading order follows the numeric prefixes; each chapter is
 self-contained enough to jump into.
 
 ## Introduction
-- [Introduction](book/00-introduction/index.md)
+- [Introduction](book/00-introduction/00-index.md)
 - [Getting Started — hello, network](book/00-introduction/01-getting-started.md)
 
 ## 1 · The Architecture of Synapse *(the heart)*
