@@ -1,0 +1,7 @@
+# Build output
+build/
+*.aux
+*.log
+*.out
+*.toc
+synapsecookbook.pdf
