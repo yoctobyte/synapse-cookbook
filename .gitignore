@@ -1,7 +1,6 @@
-# Build output
+# Build output (the committed root synapsecookbook.pdf is a tracked snapshot)
 build/
 *.aux
 *.log
 *.out
 *.toc
-synapsecookbook.pdf
