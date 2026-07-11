@@ -2,9 +2,9 @@
 
 Where Synapse gives you socket classes and protocol *clients*, **Visual Synapse**
 is one project *implemented on* Synapse that provides two things Synapse itself
-does not: **RAD components** and **protocol servers**. It is not an extension or
-superset of Synapse — just an application of it. It is a separate project; this
-chapter explains how it relates to the library the rest of this cookbook covers.
+does not: **RAD components** and **protocol servers**. It is not an extension of
+Synapse — just an application of it. It is a separate project; this chapter
+explains how it relates to the library the rest of this cookbook covers.
 
 > **Live project:** <https://github.com/yoctobyte/visualsynapse>
 
