@@ -5,8 +5,9 @@
 Articles and recipes for network programming with the
 [Ararat Synapse](https://synapse.ararat.cz/) TCP/IP library for Object Pascal —
 socket classes, protocol classes, worked examples, and multithreading tutorials.
-The PDF above is a built snapshot (~135 pp); rebuild any time with
-[`tools/build-pdf.sh`](tools/build-pdf.sh).
+The PDF above is a built snapshot (~138 pp); rebuild any time with
+[`tools/build-pdf.sh`](tools/build-pdf.sh) — see [BUILDING.md](BUILDING.md) for
+the toolchain that produces a clickable, bookmarked PDF.
 
 > Community teaching material about Ararat Synapse — **not** official upstream
 > documentation. Ararat Synapse is by **Lukas Gebauer**, now on GitHub at

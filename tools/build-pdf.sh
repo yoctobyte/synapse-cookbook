@@ -48,11 +48,16 @@ if command -v pandoc >/dev/null 2>&1; then
   uni_engine=""
   for e in lualatex xelatex; do command -v "$e" >/dev/null 2>&1 && { uni_engine="$e"; break; }; done
   if [ -n "$uni_engine" ]; then
+    # DejaVu covers the ★ · → and box-drawing glyphs; hyperref/colorlinks give a
+    # clickable TOC + PDF bookmarks. Requires: lmodern + texlive-fonts-recommended
+    # (base metrics) and texlive-latex-recommended (hyperref). See BUILDING.md.
     if pandoc "$combined" --pdf-engine="$uni_engine" --toc --toc-depth=3 \
         --metadata title="The Synapse Cookbook" \
         -V documentclass=report -V geometry:margin=1in \
+        -V mainfont="DejaVu Serif" -V monofont="DejaVu Sans Mono" -V sansfont="DejaVu Sans" \
+        -V colorlinks=true -V linkcolor=blue -V toccolor=blue -V urlcolor=blue \
         -o build/synapsecookbook.pdf 2>build/pdf-latex.log; then
-      echo "wrote build/synapsecookbook.pdf (via $uni_engine)"
+      echo "wrote build/synapsecookbook.pdf (via $uni_engine — clickable TOC + bookmarks)"
     else
       echo "note: $uni_engine failed (see build/pdf-latex.log — often missing"
       echo "      fonts: install 'lmodern texlive-fonts-recommended'). Falling back to Chrome."
