@@ -27,37 +27,53 @@ from the Internet Archive** and is preserved here verbatim under
 Moved to GitHub and revived in **2026** as living documentation. This is
 maintained for the community, for the future — no ownership is claimed over it.
 
-## The way forward
+## The book
 
-The cookbook is being rebuilt as **ordered, per-folder Markdown** under
-[`book/`](book/), assembled into a PDF (and/or site) by
-[`tools/build-pdf.sh`](tools/build-pdf.sh). Folder and file numeric prefixes
-define reading order. The recovered 0.1 PDF text
-([`releases/synapsecookbook-0.1.txt`](releases/synapsecookbook-0.1.txt)) is the
-source to migrate section-by-section into clean Markdown.
+The cookbook is **ordered, per-folder Markdown** under [`book/`](book/),
+assembled into a single document by [`tools/build-pdf.sh`](tools/build-pdf.sh).
+Folder and file numeric prefixes define reading order. Start from
+**[`SUMMARY.md`](SUMMARY.md)** for the full table of contents.
 
 ```
 book/
   00-introduction/
   01-architecture/        ★ the heart — why Synapse is shaped as it is
      blocking model & threads · synsock OS seam · SSL plugin · own crypto
-  02-socket-classes/      TBlockSocket, TTCPBlockSocket, TUDPBlockSocket, TSocksBlockSocket
-  03-protocol-classes/    TPOP3Send, LDAP, …
-  04-visual-synapse/
-  99-appendix-tutorials/  "Synapse in two hours", multithreading
+  02-socket-classes/      TBlockSocket · TTCP/TUDP/TSocks
+  03-protocol-classes/    SMTP · POP3 · IMAP · HTTP · FTP · LDAP · DNS · +survey
+  04-mime-messages/       building & parsing MIME mail
+  05-serial-ports/        TBlockSerial — the block model over RS-232
+  06-encoding-and-crypto/ hashing/HMAC · transfer encodings · charsets
+  07-utilities/           synautil · asn1util · IP & host helpers
+  08-recipes/             task-oriented: web · email · net tools · serial
+  09-visual-synapse/      the component/server superset
+  99-appendix-tutorials/  "Synapse in Two Hours"
 ```
 
 **Synapse itself is the primary subject.** The architecture section leads,
 celebrating the design — one blocking socket for every transport (incl. serial),
 the `synsock` cross-platform seam, the link-time TLS plugin (SSL bolted on
 mid-stream), and the hand-rolled crypto/encoding with zero external
-dependencies.
+dependencies. ~40 chapters, all grounded in the upstream `geby/synapse` source.
 
-### Roadmap
-- [ ] Migrate each 0.1 section from the recovered text into structured Markdown
+### Building the document
+
+```sh
+tools/build-pdf.sh
+```
+
+Dependency-tolerant: always writes a combined `build/synapsecookbook.md`; adds
+`build/synapsecookbook.html` if `pandoc` is installed, and
+`build/synapsecookbook.pdf` if a LaTeX engine (`xelatex`/`pdflatex`) is present
+too.
+
+### Status & roadmap
+- [x] Synapse-first architecture section (the design, from the source)
+- [x] Socket, protocol, MIME, serial, encoding, utility, and recipe chapters
+- [x] "Synapse in Two Hours" tutorial
+- [x] Dependency-tolerant build (Markdown → HTML/PDF)
 - [ ] Verify every code example compiles against current FPC + Ararat Synapse
-- [ ] Fill the gaps the 0.1 wiki left incomplete
-- [ ] `build-pdf.sh` → reproducible PDF from the ordered Markdown (pandoc)
+- [ ] Fill remaining gaps from the recovered 0.1 text; optional synacrypt/IMAP-depth chapters
 
 ## Related
 

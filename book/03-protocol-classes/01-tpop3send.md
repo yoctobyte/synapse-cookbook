@@ -174,4 +174,3 @@ For a big message you do not want the whole thing buffered in a `TStringList`.
 `RetrStream(N, AStream)` writes message `N` straight into any `TStream` (a file,
 a memory stream) as it arrives, bypassing `FullResult` entirely — the right tool
 for large attachments.
-</content>

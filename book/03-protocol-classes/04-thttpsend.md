@@ -224,4 +224,3 @@ Reach for the **object** the moment you need custom headers, a non-GET/POST verb
 (PUT, DELETE, PATCH — `HTTPMethod` takes any method string), the status code, the
 response headers, cookie continuity, or keep-alive across calls. Both are the
 same engine; the functions are just `THTTPSend` with the common case pre-wired.
-</content>

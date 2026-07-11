@@ -218,4 +218,3 @@ message (headers and all — the natural partner for `TMimeMess.Lines`). Append 
 `:port` to `SMTPHost` to override the port. They are the "send and forget" path;
 drop to the object whenever you need TLS toggles, capability inspection, or per-
 recipient control.
-</content>

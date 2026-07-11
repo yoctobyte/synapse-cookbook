@@ -197,4 +197,3 @@ privilege first.
 > **Honest caveat.** A simple `Bind` sends the password in cleartext BER; even
 > `BindSasl`'s DIGEST-MD5 is a legacy mechanism. Treat TLS (LDAPS or STARTTLS) as
 > mandatory for anything but an anonymous read against a public directory.
-</content>

@@ -83,28 +83,28 @@ is `https://`, so a plugin in `uses` is all it takes.
 
 ## The clients
 
-All of these live in `/home/rene/pastella-archive/synapse-upstream/` (one unit
-per protocol). Ports are the defaults each client's constructor sets.
+Each lives in its own unit in the Synapse source (one unit per protocol). Ports
+are the defaults each client's constructor sets.
 
 | Protocol | Unit | Class | Default port | Notes |
 |----------|------|-------|:------------:|-------|
 | SMTP / ESMTP | `smtpsend` | `TSMTPSend` | 25 | STARTTLS, CRAM-MD5/PLAIN/LOGIN auth · [chapter](03-tsmtpsend.md) |
 | POP3 | `pop3send` | `TPOP3Send` | 110 | APOP, STLS, XOAUTH2 · [chapter](01-tpop3send.md) |
-| IMAP4 | `imapsend` | `TIMAPSend` | 143 | full mailbox client |
+| IMAP4 | `imapsend` | `TIMAPSend` | 143 | full mailbox client · [chapter](05-timapsend.md) |
 | HTTP / HTTPS | `httpsend` | `THTTPSend` | 80 | convenience `HttpGetText` etc. · [chapter](04-thttpsend.md) |
-| FTP | `ftpsend` | `TFTPSend` | 21 | active/passive data connections |
-| NNTP | `nntpsend` | `TNNTPSend` | 119 | Usenet news |
+| FTP | `ftpsend` | `TFTPSend` | 21 | active/passive data connections · [chapter](06-tftpsend.md) |
+| NNTP | `nntpsend` | `TNNTPSend` | 119 | Usenet news · [chapter](08-other-protocols.md) |
 | LDAP v2/v3 | `ldapsend` | `TLDAPSend` | 389 | bind/search, SASL DIGEST-MD5 · [chapter](02-ldap.md) |
-| SNMP | `snmpsend` | `TSNMPSend` | 161 | plus traps on 162 |
-| SNTP | `sntpsend` | `TSNTPSend` | 123 | network time |
-| DNS | `dnssend` | `TDNSSend` | 53 | resolver client |
-| Ping | `pingsend` | `TPINGSend` | — | ICMP echo (raw socket) |
-| Telnet | `tlntsend` | `TTelnetSend` | 23 | terminal session |
-| Syslog | `slogsend` | `TSyslogSend` | 514 | RFC-3164 logging (UDP) |
+| SNMP | `snmpsend` | `TSNMPSend` | 161 | plus traps on 162 · [chapter](08-other-protocols.md) |
+| SNTP | `sntpsend` | `TSNTPSend` | 123 | network time · [chapter](08-other-protocols.md) |
+| DNS | `dnssend` | `TDNSSend` | 53 | resolver client · [chapter](07-dns.md) |
+| Ping | `pingsend` | `TPINGSend` | — | ICMP echo (raw socket) · [chapter](08-other-protocols.md) |
+| Telnet | `tlntsend` | `TTelnetSend` | 23 | terminal session · [chapter](08-other-protocols.md) |
+| Syslog | `slogsend` | `TSyslogSend` | 514 | RFC-3164 logging (UDP) · [chapter](08-other-protocols.md) |
 | ClamAV | `clamsend` | `TClamSend` | 3310 | virus-scan daemon client |
 
-The chapters that follow work through five of these in detail — POP3, LDAP,
-SMTP, and HTTP — but once you have read one, the others hold no surprises. Learn
-the rhythm once; it repeats all the way down the table.
-</content>
-</invoke>
+The chapters that follow work through the most-used clients in detail — POP3,
+LDAP, SMTP, HTTP, IMAP, FTP, and DNS — with the rest surveyed in
+[other protocols](08-other-protocols.md). Once you have read one, the others hold
+no surprises: learn the rhythm once, and it repeats all the way down the table.
+
