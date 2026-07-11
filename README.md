@@ -51,7 +51,7 @@ book/
   06-encoding-and-crypto/ hashing/HMAC · transfer encodings · charsets
   07-utilities/           synautil · asn1util · IP & host helpers
   08-recipes/             task-oriented: web · email · net tools · serial
-  09-visual-synapse/      the component/server superset
+  09-visual-synapse/      components & servers built on Synapse
   99-appendix-tutorials/  "Synapse in Two Hours"
 ```
 
@@ -83,7 +83,7 @@ too.
 ## Related
 
 - [Ararat Synapse](https://synapse.ararat.cz/) · [geby/synapse](https://github.com/geby/synapse) — the library this teaches (© Lukas Gebauer)
-- [Visual Synapse](https://github.com/yoctobyte/visualsynapse) — component/server superset built on Synapse
+- [Visual Synapse](https://github.com/yoctobyte/visualsynapse) — components & servers implemented on Synapse
 
 ## Provenance & authenticity
 

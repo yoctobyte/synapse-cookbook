@@ -60,7 +60,7 @@ self-contained enough to jump into.
 - [Serial](book/08-recipes/04-serial.md)
 
 ## 9 · Visual Synapse
-- [The component/server superset](book/09-visual-synapse/index.md)
+- [Components & servers built on Synapse](book/09-visual-synapse/index.md)
 
 ## Appendix
 - [Synapse in Two Hours — the tutorial](book/99-appendix-tutorials/synapse-in-two-hours.md)
