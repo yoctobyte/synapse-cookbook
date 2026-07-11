@@ -7,11 +7,13 @@ This cookbook began as a community wiki that later went offline; version 0.1 was
 reconstructed from the Internet Archive. It was always meant as a practical,
 example-first companion to the library — not a formal reference.
 
-Beginners may want to start at the **Appendix — Tutorials**: *"Synapse in two
-hours"* shows elementary code and gives a kickstart in writing multi-threaded
-applications. Readers who want to understand *why* the library is shaped the way
-it is should read **[The Architecture of Synapse](../01-architecture/00-index.md)**
-first — it is the heart of this cookbook, and the reason the recipes are so short.
+Brand new to this? Start with **[Getting Started](01-getting-started.md)** — it
+assumes no networking knowledge and has you talking to the internet in a few
+minutes. From there, the **Appendix — [Synapse in Two Hours](../99-appendix-tutorials/synapse-in-two-hours.md)**
+goes deeper (HTTP, a threaded server, TLS). Readers who want to understand *why*
+the library is shaped the way it is should read **[The Architecture of
+Synapse](../01-architecture/00-index.md)** — it is the heart of this cookbook,
+and the reason the recipes are so short.
 
 > **Status (2026 revival):** this Markdown edition is being migrated,
 > section-by-section, from the recovered 0.1 text
