@@ -64,6 +64,13 @@ dependencies.
 - [Ararat Synapse](https://synapse.ararat.cz/) · [geby/synapse](https://github.com/geby/synapse) — the library this teaches (© Lukas Gebauer)
 - [Visual Synapse](https://github.com/yoctobyte/visualsynapse) — component/server superset built on Synapse
 
+## Provenance & authenticity
+
+The recovered 0.1 material is human-written history; the modern revived chapters
+are **largely AI-generated** from the upstream source, after two decades of
+neglect. No edition is authenticated — one physical copy will be, and only once
+**Lukas Gebauer** signs it by hand, in person. See [`NOTES.md`](NOTES.md).
+
 ## License
 
 Released to the public domain under **[CC0 1.0](LICENSE)** — no rights reserved,
